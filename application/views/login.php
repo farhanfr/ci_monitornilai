@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login-Monitor Nilai</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url();?>assets/images/favicon.png">
+    <!-- Bootstrap Core CSS -->
+    <link href="<?= base_url();?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="<?= base_url();?>assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <!--This page css - Morris CSS -->
+    <link href="<?= base_url();?>assets/plugins/c3-master/c3.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="<?= base_url();?>assets/css/style_login.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="<?= base_url();?>assets/css/colors/blue.css" id="theme" rel="stylesheet">
+</head>
+<body>
+
+<div class="row">
+                    <!-- Column -->
+ <div class="card card-login">
+     <div class="card-block">
+                     <div>
+                     	<form action="<?= base_url('index.php/Con_pengajar/login_customer');?>" method="post">
+                         <h3 class="card-title">Login Monitor Nilai</h3>
+                         <?= $this->session->flashdata('msg_login'); ?>
+                         	<div class="form-group">
+                         		<label>Email</label>
+                         		<input type="email" name="emailus" placeholder="Masukkan Email" class="form-control" required>
+                         	</div>
+                         	<div class="form-group">
+                         		<label>Password</label>
+                         		<input type="password" name="passwordus" placeholder="Masukkan Password" class="form-control" required>
+                         	</div>
+                         	<input type="submit" name="submit" value="Login" class="btn btn-success">
+                         </form>                         
+    				</div>
+  				</div>
+			</div>
+
+
+</body>
+</html>
