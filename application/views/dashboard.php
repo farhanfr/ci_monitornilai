@@ -9,7 +9,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url();?>assets/images/favicon.png">
     <title><?= $title; ?></title>
     <!-- Bootstrap Core CSS -->
     <link href="<?= base_url();?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -82,7 +81,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url();?>assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" /><?= $this->session->namaus ?></a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $this->session->namaus ?></a>
                         </li>
                     </ul>
                 </div>
