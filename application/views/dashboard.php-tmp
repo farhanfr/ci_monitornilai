@@ -129,14 +129,14 @@
 }?>"> <a class="waves-effect waves-dark" href="<?=base_url('index.php/Con_admin/dash_datakelas');?>" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Data Kelas</span></a>
                         </li>
 
-                        <li class="<?php if ($this->uri->segment(2) == "dash_kelassaya") {
+                        <li class="<?php if ($this->uri->segment(2) == "dash_datapengajar") {
 	echo 'active';
-}?>"> <a class="waves-effect waves-dark" href="<?=base_url('index.php/Con_pengajar/dash_kelassaya');?>" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Data Pengajar</span></a>
+}?>"> <a class="waves-effect waves-dark" href="<?=base_url('index.php/Con_admin/dash_datapengajar');?>" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Data Pengajar</span></a>
                         </li>
 
-                        <li class="<?php if ($this->uri->segment(2) == "dash_kelas_saya") {
+                        <li class="<?php if ($this->uri->segment(2) == "dash_datasiswa") {
 	echo 'active';
-}?>"> <a class="waves-effect waves-dark" href="<?=base_url('index.php/Con_pengajar/dash_kelas_saya');?>" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Data Siswa</span></a>
+}?>"> <a class="waves-effect waves-dark" href="<?=base_url('index.php/Con_admin/dash_datasiswa');?>" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Data Siswa</span></a>
                         </li>
 
 <?php endif?>

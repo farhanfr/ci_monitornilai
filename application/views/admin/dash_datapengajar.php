@@ -1,0 +1,64 @@
+<div class="card card-login">
+    <div class="card-block">
+    	<div id="notif"><?= $this->session->flashdata('msg_regpeng'); ?></div>
+    	 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Tambah Pengajar</button>
+
+    	 			<table class="table table-bordered">
+                       <thead>
+                           <tr>
+                                <th>No</th>
+                                <th>Nama Pengajar</th>
+                                <th>Email Pengajar</th>
+                                <th>Password Pengajar</th>
+                                <th>Aksi</th>
+                           </tr>
+                       </thead>
+                       <?php $no=1; foreach ($get_data as $gd): ?>
+                       <tbody>
+                            <td><?= $no++; ?></td>
+                            <td><?= $gd->namaus ?></td>
+                            <td><?= $gd->emailus ?></td>
+                            <td><?= $gd->passwordus ?></td>
+                            <td>
+                            	<a href="<?= base_url('index.php/Con_admin/delete_macamkelas/'.$gd->id_user.'');?>"><button class="btn btn-primary" disabled>Update Pengajar</button></a>
+                            	<a href="<?= base_url('index.php/Con_admin/delete_macamkelas/'.$gd->id_user.'');?>"><button class="btn btn-danger" onclick="return confirm('Hapus Kelas Ini?')">Hapus Pengajar</button></a>
+                              <a href="<?= base_url('index.php/Con_admin/dash_detsiswa/'.$gd->id_user.'');?>"><button class="btn btn-info">Lihat Siswa</button></a></td>
+                       </tbody>
+                        <?php endforeach ?>
+                   </table>
+
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register Pengajar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="<?= base_url('index.php/Con_admin/register_pengajar');?>" method="post">
+            <div class="form-group">
+            	<label>Nama Pengajar</label>
+                <input type="text" name="namaus" value="" placeholder="Masukkan Nama" class="form-control" required>
+            </div>
+            <div class="form-group">
+            	<label>Email Pengajar</label>
+                <input type="email" name="emailus" value="" placeholder="Masukkan Email" class="form-control" required>
+            </div>
+            <div class="form-group">
+            	<label>Password</label>
+                <input type="text" name="passwordus" value="" placeholder="Masukkan Password" class="form-control" required>
+            </div>
+            <input type="submit" name="submit" value="Tambah" class="btn btn-primary">
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

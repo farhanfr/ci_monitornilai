@@ -43,6 +43,36 @@ class Mo_admin extends CI_Model {
 		$this->db->where($where)->delete('kelas');
 	}
 
+	//-----------------Data Pengajar-----------------//
+	public function get_datapengajar_process()
+	{
+		return $this->db->where('status','pengajar')->get('user')->result();
+	}
+	public function register_pengajar_process()
+	{
+		$data=array(
+			'id_user'=>null,
+			'namaus'=>$this->input->post('namaus'),
+			'emailus'=>$this->input->post('emailus'),
+			'passwordus'=>$this->input->post('passwordus'),
+			'status'=>'pengajar');
+		$this->db->insert('user',$data);
+		if ($this->db->affected_rows() > 0 ) {
+			return true;
+		}
+		else{
+			return false;
+		}		
+	}
+
+	//---------------Data Siswa----------------//
+	public function getdata_siswa_process($id_user)
+	{
+		$where=array('data_siswa.id_user'=>$id_user);
+		return $this->db->join('kelas', 'kelas.id_kelas = data_siswa.id_kelas')->where($where)->get('data_siswa')->result();
+	}
+
+
 }
 
 /* End of file Mo_admin.php */

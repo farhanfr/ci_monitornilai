@@ -1,7 +1,7 @@
 <div class="card card-login">
     <div class="card-block">
         <div class="row">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari siswa...." class="form-control">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Klik Disini Untuk Cari siswa...." class="form-control">
             <div class="table-responsive">
                 <div id="notif"><?=$this->session->flashdata('msg_upnilai');?></div>
                     <table class="table table-bordered" id="myTable">
